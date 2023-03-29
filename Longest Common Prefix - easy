@@ -1,0 +1,21 @@
+class Solution {
+public:
+    string longestCommonPrefix(vector<string>& strs) {
+        int numWords = strs.size();
+        if (numWords == 0) {
+            return ""; // Handle empty input vector
+        }
+        string firstWord = strs[0];
+        string ans;
+        for (int i = 0; i < firstWord.size(); i++) {
+            char currentChar = firstWord[i];
+            for (string word : strs) {
+                if (i >= word.size() || word[i] != currentChar) {
+                    return ans; // End of common prefix found
+                }
+            }
+            ans += currentChar; // Add current character to answer
+        }
+        return ans;
+    }
+};

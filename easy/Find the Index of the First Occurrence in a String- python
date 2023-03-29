@@ -1,0 +1,13 @@
+class Solution(object):
+    def strStr(self, haystack, needle):
+        """
+        :type haystack: str
+        :type needle: str
+        :rtype: int
+        """
+        return haystack.find(needle)
+
+#In Python, the string.find() method is used to search for a substring in a
+#given string and returns the index of the first occurrence of the substring
+#in the string. If the substring is not found in the string, it returns -1.
+
